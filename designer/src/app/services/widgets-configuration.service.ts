@@ -55,7 +55,7 @@ export class WidgetsConfigurationService {
     }
   }
 
-  private _download(input: string, fileName: string, contentType = 'text/plain') {
+  private _download(input: string, fileName: string, contentType = 'text/plain'): void {
     const a: HTMLAnchorElement = document.createElement('a');
     const file = new Blob([input], {type: contentType});
 

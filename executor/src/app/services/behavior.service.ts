@@ -22,7 +22,7 @@ export class BehaviorService {
     });
   }
 
-  public updateChangesCallback(input: TWidgetTextInput) {
+  public updateChangesCallback(input: TWidgetTextInput): void {
     const item = this._getItem(input);
     if (!item) return;
 
@@ -33,7 +33,7 @@ export class BehaviorService {
     input.callback && this._runFunction(input.callback);
   }
 
-  public updateChangesClick(input: TWidgetTextInput | TWidgetImage | TWidgetButton) {
+  public updateChangesClick(input: TWidgetTextInput | TWidgetImage | TWidgetButton): void {
     const item = this._getItem(input);
     if (!item) return;
 
@@ -62,8 +62,8 @@ export class BehaviorService {
     }
   }
 
-  private _getItem(input: TWidgetTextInput | TWidgetImage | TWidgetButton) {
-    if (!input) return;
+  private _getItem(input: TWidgetTextInput | TWidgetImage | TWidgetButton): TWidgetTextInput | TWidgetImage | TWidgetButton | null {
+    if (!input) return null;
     return this._tree[input.identifier] || null;
   }
 

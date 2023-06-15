@@ -21,11 +21,11 @@ export class JsContentService {
 
         widgets.forEach(item => {
         if (item.type === WidgetTypeEnum.textInput) {
-            exportStr += this._getElementInputText(item.configuration);
+            exportStr += this._getElementInputText(item.configuration as TWidgetTextInput);
         } else if (item.type === WidgetTypeEnum.button) {
-            exportStr += this._getElemenButton(item.configuration);
+            exportStr += this._getElemenButton(item.configuration as TWidgetButton);
         } else if (item.type === WidgetTypeEnum.image) {
-            exportStr += this.getElemenImage(item.configuration);
+            exportStr += this.getElemenImage(item.configuration as TWidgetImage);
         }
         });
 
