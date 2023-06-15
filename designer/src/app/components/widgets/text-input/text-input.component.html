@@ -1,0 +1,16 @@
+<div class="widget-text-input g-widget-textInput">
+    <div class="g-widget-title">INPUT TEXT</div>
+
+    <div class="g-widget-input-title">Id</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.identifier" />
+    <div class="g-widget-input-title">Text</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.text" />
+    <div class="g-widget-input-title">Placeholder</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.placeholder" />
+    <div class="g-widget-input-title">Click</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.click" />
+    <div class="g-widget-input-title">Callback</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.callback" />
+
+    <ng-content></ng-content>
+</div>

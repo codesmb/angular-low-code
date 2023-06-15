@@ -1,0 +1,3 @@
+<div class="widget-text-input"> 
+    <input type="text" id="{{ item.identifier }}" [(ngModel)]="item.text" (input)="updateChangesCallback()" (click)="updateChangesClick()" [placeholder]="item.placeholder" />
+</div>

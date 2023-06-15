@@ -1,0 +1,29 @@
+<div class="app-component">
+  <div *ngFor="let widget of behaviorService.widgets$ | async" style="margin: 20px;">
+    <widget-text-input 
+      *ngIf="widget.type === WIDGET_TYPE_ENUM.textInput"
+      [item]="widget"
+    >
+    </widget-text-input>
+
+    <widget-image 
+      *ngIf="widget.type === WIDGET_TYPE_ENUM.image"
+      [item]="widget"
+    ></widget-image>
+
+    <widget-button
+      *ngIf="widget.type === WIDGET_TYPE_ENUM.button"
+      [item]="widget"
+    ></widget-button>
+  </div>
+
+  <div class="debug-cont">
+    <div>DEBUG</div>
+    <p>https://tinypng.com/images/social/website.jpg</p>
+
+    <div *ngFor="let widget of behaviorService.widgets$ | async">
+      <pre><p>{{widget | json}}</p></pre>
+    </div>
+  </div>
+  
+</div>

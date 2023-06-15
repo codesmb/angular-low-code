@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+.g-widget-title {
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.g-widget-input {
+    margin: 10px 0;
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+}
+
+.g-widget-input:focus {
+    outline: none;
+}
+
+.g-widget-button {
+    background: azure;
+    border-radius: 5px;
+}
+
+.g-widget-image {
+    background: antiquewhite;
+    border-radius: 5px;
+}
+
+.g-widget-textInput {
+    background: cornsilk;
+    border-radius: 5px;
+}

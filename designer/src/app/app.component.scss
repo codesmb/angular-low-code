@@ -1,0 +1,86 @@
+.app-component {
+    width: 100%;
+}
+
+.widget-list-cont {
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 2px #ccc;
+
+    >button {
+        margin-right: 10px;
+        padding: 15px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    >button:hover {
+        opacity: 0.6;
+    }
+
+    .widget-list-title {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
+
+.wiget-configuation-cont {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+    .wiget-configuation-wrap {
+        .title {
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .operation-button-cont {
+            >button {
+                margin-right: 10px;
+                padding: 15px 10px;
+                border: 1px solid darkgray;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            >button:hover {
+                opacity: 0.6;
+            }
+        }
+
+        .widgets-cont{
+            .widget-remove {
+                padding: 15px 10px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.5;
+                background-color: #ff0000;
+                color: #fff;
+            }
+
+            .widget-remove:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .widget-error{
+        color: #ff0000;
+        margin: 20px 0;
+        font-size: 16px;
+        font-weight: 600;
+        border: 1px solid #ff0000;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .debug-cont {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+    }
+}
+

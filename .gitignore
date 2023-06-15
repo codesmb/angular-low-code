@@ -1,0 +1,87 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# DESIGNER:
+
+# Compiled output
+/designer/dist
+/designer/tmp
+/designer/out-tsc
+/designer/bazel-out
+
+# Node
+/designer/node_modules
+/designer/npm-debug.log
+/designer/yarn-error.log
+
+# IDEs and editors
+/designer/.idea/
+/designer/.project
+/designer/.classpath
+/designer/.c9/
+/designer/*.launch
+/designer/.settings/
+/designer/*.sublime-workspace
+
+# Visual Studio Code
+/designer/.vscode/*
+/designer/!.vscode/settings.json
+/designer/!.vscode/tasks.json
+/designer/!.vscode/launch.json
+/designer/!.vscode/extensions.json
+/designer/.history/*
+
+# Miscellaneous
+/designer/.angular/cache
+/designer/.sass-cache/
+/designer/connect.lock
+/designer/coverage
+/designer/libpeerconnection.log
+/designer/testem.log
+/designer/typings
+
+# System files
+/designer/.DS_Store
+/designer/Thumbs.db
+
+# EXECUTOR:
+
+# Compiled output
+/executor/dist
+/executor/tmp
+/executor/out-tsc
+/executor/bazel-out
+
+# Node
+/executor/node_modules
+/executor/npm-debug.log
+/executor/yarn-error.log
+
+# IDEs and editors
+/executor/.idea/
+/executor/.project
+/executor/.classpath
+/executor/.c9/
+/executor/*.launch
+/executor/.settings/
+/executor/*.sublime-workspace
+
+# Visual Studio Code
+/executor/.vscode/*
+/executor/!.vscode/settings.json
+/executor/!.vscode/tasks.json
+/executor/!.vscode/launch.json
+/executor/!.vscode/extensions.json
+/executor/.history/*
+
+# Miscellaneous
+/executor/.angular/cache
+/executor/.sass-cache/
+/executor/connect.lock
+/executor/coverage
+/executor/libpeerconnection.log
+/executor/testem.log
+/executor/typings
+
+# System files
+/executor/.DS_Store
+/executor/Thumbs.db

@@ -1,0 +1,12 @@
+<div class="widget-image g-widget-image">
+    <div class="g-widget-title">IMAGE</div>
+
+    <div class="g-widget-input-title">Id</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.identifier" />
+    <div class="g-widget-input-title">Source</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.src" />
+    <div class="g-widget-input-title">Click</div>
+    <input type="text" class="g-widget-input" [disabled]="isDisabled" [(ngModel)]="item.click" />
+
+    <ng-content></ng-content>
+</div>

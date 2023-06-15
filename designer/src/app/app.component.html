@@ -1,0 +1,101 @@
+<div class="app-component">
+  <div class="widget-list-cont">
+    <div class="widget-list-title">Widget List</div>
+
+    <button 
+      type="button"
+      *ngFor="let item of accessWidgets"
+      (click)="addWidget(item.type)"
+      [disabled]="isDisabled()"
+      [ngClass]="'g-widget-' + item.type"
+    >
+      {{ item.title }}
+    </button>
+  </div>
+
+  <div class="wiget-configuation-cont">
+    <div class="wiget-configuation-wrap" *ngIf="widgetService.widgets.length">
+      <div class="title">Configuration</div>
+
+      <div class="operation-button-cont">
+        <button 
+          (click)="widgetsConfigurationService.createJS()"
+          [disabled]="isDisabled()"
+        >
+            Create JS
+        </button>
+
+        <button 
+          (click)="widgetsConfigurationService.createJSON()"
+          [disabled]="isDisabled()"
+        >
+            Create JSON
+        </button>
+
+        <button 
+          (click)="widgetService.clear()"
+          [disabled]="isDisabled()"
+        >
+          Clear
+        </button>
+      </div>
+
+      <div class="widgets-cont">
+        <div *ngFor="let widget of widgetService.widgets">
+          <!-- Widgets -->
+          <widget-text-input 
+            *ngIf="widget.type === WIDGET_TYPE_ENUM.textInput"
+            [isDisabled]="isDisabled()"
+            [(item)]="widget.configuration"
+          >
+            <button
+              class="widget-remove"
+              (click)="removeWidget(widget.id)"
+              [disabled]="isDisabled()"
+            >
+              Remove
+            </button>
+  
+            <div class="widget-error" *ngIf="checkError(widget)">{{ widget.errorMsg }}</div>
+            <div class="debug-cont">Debug:{{widget.configuration | json}}</div>
+          </widget-text-input>
+  
+          <widget-button
+            *ngIf="widget.type === WIDGET_TYPE_ENUM.button"
+            [isDisabled]="isDisabled()"
+            [(item)]="widget.configuration"
+          >
+            <button
+              class="widget-remove"
+              (click)="removeWidget(widget.id)"
+              [disabled]="isDisabled()"
+            >
+              Remove
+            </button>
+  
+            <div class="widget-error" *ngIf="checkError(widget)">{{ widget.errorMsg }}</div>
+            <div class="debug-cont">Debug:{{widget.configuration | json}}</div>
+          </widget-button>
+  
+          <widget-image
+            *ngIf="widget.type === WIDGET_TYPE_ENUM.image"
+            [isDisabled]="isDisabled()"
+            [(item)]="widget.configuration"
+          >
+            <button
+              class="widget-remove"
+              (click)="removeWidget(widget.id)"
+              [disabled]="isDisabled()"
+            >
+              Remove
+            </button>
+  
+            <div class="widget-error" *ngIf="checkError(widget)">{{ widget.errorMsg }}</div>
+            <div class="debug-cont">Debug:{{widget.configuration | json}}</div>
+          </widget-image>
+          <!-- /Widgets -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
